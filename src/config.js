@@ -6,6 +6,8 @@ const _ = require('lodash')
 const dotenv = require('dotenv')
 const ENV = process.env.NODE_ENV || 'development'
 
+console.log("ENV::::: " + ENV)
+
 if (ENV === 'development') dotenv.load()
 
 const config = {
