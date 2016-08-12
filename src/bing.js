@@ -5,6 +5,7 @@ const _ = require('lodash')
 
 const config = require('./config')
 const pgp = require('pg-promise')();
+pgp.pg.defaults.ssl = true
 
 const cn = {
   host: config('PGHOST'),
