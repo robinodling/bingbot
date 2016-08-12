@@ -7,7 +7,7 @@ const dotenv = require('dotenv')
 const ENV = process.env.NODE_ENV || 'development'
 
 console.log("ENV::::: " + ENV)
-
+console.log("process.env.DATABASE_URL: " + process.env.DATABASE_URL)
 if (ENV === 'development') dotenv.load()
 
 const config = {
