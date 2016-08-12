@@ -12,7 +12,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node ./src"
+    "start": "node ./src/index.js"
   },
   "author": "Jens Tollofsén",
   "license": "MIT",
