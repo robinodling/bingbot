@@ -24,20 +24,16 @@ bot.startRTM(function(err,bot,payload) {
 });
 
 controller.hears('^(-?[0-9]+) (.*)', 'direct_message,direct_mention,mention', function(bot, message) {
-  binga(bot, message.user, message.match['1'], message.match['2'])
+
+  binga(bot, message)
   
-  bot.api.reactions.add({
-    timestamp: message.ts,
-    channel: message.channel,
-    name: 'beer'
-  }, function(err, res) {
-    if (err) {
-      bot.botkit.log('Failed to add emoji reaction :(', err)
-    }
-  })
 });
 
+controller.hears('.*', 'direct_message,direct_mention,mention', function(bot, message) {
 
+  bot.reply(message, "Fan binga ordentligt. <ANTAL> <VAD DU BINGAR>.. Ska väll inte vara så jävla svårt!")
+  
+});
 
 controller.setupWebserver(config('PORT'),function(err,webserver) {
   controller.createWebhookEndpoints(controller.webserver)

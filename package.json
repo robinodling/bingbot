@@ -7,11 +7,12 @@
     "botkit": "^0.2.2",
     "dotenv": "^2.0.0",
     "lodash": "^4.14.2",
-    "pg": "^6.1.0"
+    "pg": "^6.1.0",
+    "pg-promise": "^5.2.7"
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node ./src"
+    "start": "node ./src/index.js"
   },
   "author": "Jens Tollofsén",
   "license": "MIT",
