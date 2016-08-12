@@ -12,10 +12,11 @@ const cn = {
   database: config('PGDATABASE'),
   user: config('PGUSER'),
   password: config('PGPASSWORD'),
-  poolSize: config('PGPOOLSIZE')
+  poolSize: config('PGPOOLSIZE'),
+  ssl: config('PGSSL')
 }
 
-const db = pgp(cn)
+const db = pgp(config.DATABASE_URL)
 
 function bing_sql(bot, message) {
   
