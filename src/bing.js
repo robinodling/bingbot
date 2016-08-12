@@ -17,8 +17,8 @@ const cn = {
   ssl: config('PGSSL')
 }
 
-console.log("TAAAAAAAAAAAG " + config.DATABASE_URL)
-const db = pgp(config.DATABASE_URL)
+
+const db = pgp(config('DATABASE_URL'))
 
 
 function bing_sql(bot, message) {
