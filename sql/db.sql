@@ -1,5 +1,5 @@
 CREATE TABLE users (
-    uid character(10) NOT NULL,
+    uid character(10) NOT NULL UNIQUE,
     nick character(20) NOT NULL,
     email character(50) NOT NULL,
     first_name character(30),
