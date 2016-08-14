@@ -3,6 +3,7 @@
 var http = require('http')
 setInterval(function() {
 	http.get("http://pirayabot.herokuapp.com")
+	console.log('-------------SENDING GET TO PREVENT SLEEP-------------')
 }, 300000)
 
 const _ = require('lodash')
