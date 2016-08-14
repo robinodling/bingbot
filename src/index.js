@@ -1,5 +1,9 @@
-
 'use strict'
+
+var http = require('http')
+setInterval(function() {
+	http.get("http://pirayabot.herokuapp.com")
+}, 300000)
 
 const _ = require('lodash')
 
